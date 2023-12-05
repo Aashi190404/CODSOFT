@@ -1,0 +1,49 @@
+#include<bits/stdc++.h>
+using namespace std;
+class calculate
+{
+    int a,b,choice;
+    public:
+    void input()
+    {
+        cout<<"Please enter two numbers:";
+        cin>>a >>b;
+    }
+    
+    void instructions()
+    {
+        cout<<"If u want to add, enter 1.\nIf u want to subtract, enter 2\n";
+        cout<<"If u want to multiply, enter 3.\nIf u want to divide, enter 4.\n";
+    }
+    
+    void request()
+    {
+        cout<<"Please enter your choice:";
+        cin>>choice;
+    }
+    
+    int getResult()
+    {
+        if(choice==1)
+        return a+b;
+        
+        else if(choice==2)
+        return a-b;
+        
+        else if(choice==3)
+        return a*b;
+        
+        else
+        return a/b;
+    }
+};
+
+int main()
+{
+    calculate obj;
+    obj.input();
+    obj.instructions();
+    obj.request();
+    int ans=obj.getResult();
+    cout<<"The answer according to your query is:"<<ans;
+}
